@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+        span {
+            padding-left: 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <table class="table table-striped">
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        <tr>
+            <td><%= myUser.username %></td>
+            <td><%= myUser.password %></td>
+            <td><%= myUser.email %></td>
+            <td><%= myUser.first_name %></td>
+            <td><%= myUser.last_name %></td>
+        </tr>
+    </table>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Email</th>
+        </tr>
+        <% data.forEach(function(user) { %>
+            <tr>
+                <td> <%= user.username; %> </td>
+                <td> <%= user.password; %> </td>
+                <td> <%= user.email; %> </td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+</html>
